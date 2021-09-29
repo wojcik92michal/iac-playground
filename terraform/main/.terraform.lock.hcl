@@ -1,6 +1,23 @@
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
+provider "registry.terraform.io/cloudsigma/cloudsigma" {
+  version     = "1.6.0"
+  constraints = "1.6.0"
+  hashes = [
+    "h1:AyeKaO+DWcasO7NQEFR/6/rdGvSelBl6rzH+D5DUhkc=",
+    "zh:0d4cd945443578fa460760136623f9f95ac31a15ef6ffe59a646aa4d8b684aef",
+    "zh:0ecd8aff61497c6c50d0e90ac2f4561ccf15e399fbd7ae3df284de0a15c8bfa4",
+    "zh:1da4c393edcee757251ca81b54c35af59c93072790d87ffaaf9ba1ebd7f09d4a",
+    "zh:23dd94a44b63e0e157eac42f7a0f7f034ffad8e84d1231e5c4c0e96d743cb930",
+    "zh:2bcc9588e2fe72ed993cfeb694a24515dc9938961898f984c7c2e924206c3b60",
+    "zh:5813a9952efa1e8b2ce0d6a5cc1d8a6ed426d7330da4b34858e0c82662dce434",
+    "zh:8527b980b7c3b708d928c872e31c119f6064fa92c7a95a060a73d65569bf9380",
+    "zh:b6309ade3e5d21adc42dea97f3f0cfa3d3591df21f0d781e6b70292755d0e9af",
+    "zh:e62afea3158818b60875b5879c61522f1f17d731278661b0b4aa9ab8e19086fb",
+  ]
+}
+
 provider "registry.terraform.io/hashicorp/aws" {
   version     = "3.60.0"
   constraints = "3.60.0"

@@ -5,6 +5,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "3.60.0"
     }
+
+    cloudsigma = {
+      source  = "cloudsigma/cloudsigma"
+      version = "1.6.0"
+    }
   }
 
   backend "s3" {

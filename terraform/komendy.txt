@@ -1,4 +1,14 @@
 -- przeniesienie stanu po refaktorze do modułu
-t
-erraform state mv aws_security_group.security_group module.my_first_ec2_instance.aws_security_group.security_group
+
+terraform state mv aws_security_group.security_group module.my_first_ec2_instance.aws_security_group.security_group
 terraform state mv aws_instance.ec2_instance module.my_first_ec2_instance.aws_instance.ec2_instance
+
+
+-- 
+terraform import module.my_imported_ec2_instance.aws_security_group.security_group sg-0b9a20564b3f1a910
+terraform import module.my_imported_ec2_instance.aws_instance.ec2_instance i-05d885ebc7d9fe479
+
+
+
+terraform import module.my_first_cloudsigma_server.cloudsigma_drive.drive e01edd2e-7e0a-4acb-a2f7-1767dcf49265
+terraform import module.my_first_cloudsigma_server.cloudsigma_server.server d061f637-7cf6-482d-91ea-e0ff9c03e4bc
