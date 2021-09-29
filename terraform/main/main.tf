@@ -3,6 +3,14 @@ provider "aws" {
   region                  = "eu-central-1"
 }
 
+module "state" {
+  source = "../modules/terraform-state"
+
+  aws_state_bucket_name     = "iac-workshops-terraform-state-bucket"
+  aws_state_lock_table_name = "iac-workshops-terraform-state-lock-table"
+}
+
+
 module "my_first_ec2_instance" {
   source = "../modules/aws-ec2"
 
