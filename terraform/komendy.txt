@@ -1,0 +1,4 @@
+-- przeniesienie stanu po refaktorze do modułu
+t
+erraform state mv aws_security_group.security_group module.my_first_ec2_instance.aws_security_group.security_group
+terraform state mv aws_instance.ec2_instance module.my_first_ec2_instance.aws_instance.ec2_instance
