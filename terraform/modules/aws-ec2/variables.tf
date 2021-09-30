@@ -13,3 +13,7 @@ variable "key_name" {
 variable "name" {
   type = string
 }
+
+variable "group_name" {
+  type = string
+}

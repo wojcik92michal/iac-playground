@@ -8,7 +8,7 @@ terraform {
 
 
 locals {
-  os_system_uuid = "c62fe993-de0a-4a08-9858-21352eab7df2" # Ubuntu 21.04 LTS
+  os_system_uuid = "f2ded4c4-8dc6-40af-a0fa-bd4560034084" # Ubuntu 21.04 LTS
 }
 
 resource "cloudsigma_drive" "drive" {

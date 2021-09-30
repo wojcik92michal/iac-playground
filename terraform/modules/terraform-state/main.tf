@@ -6,10 +6,6 @@ resource "aws_s3_bucket" "terraform-state-bucket" {
     enabled = true
   }
 
-  lifecycle {
-    prevent_destroy = true
-  }
-
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {

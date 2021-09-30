@@ -1,2 +1,0 @@
--- sprawdzenie czy apache działa
-httpd -v
