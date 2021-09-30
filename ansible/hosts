@@ -1,0 +1,1 @@
+ec2-first-server ansible_host=ec2-3-66-191-181.eu-central-1.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=/Users/MichalWojcik/Desktop/Projekty/iac-playground/terraform/main/workshops_keypair.pem

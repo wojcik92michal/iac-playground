@@ -1,0 +1,10 @@
+---
+- name: Setup servers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create /home/workshops repo
+      file:
+        path: "/home/workshops"
+        state: directory
