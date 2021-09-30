@@ -9,18 +9,6 @@
         path: "/home/workshops"
         state: directory
 
-    - name: Install the latest version of Apache
-      package:
-        name:
-          - httpd
-        state: latest
-
-    - name: Install the nmap
-      package:
-        name:
-          - nmap
-        state: latest
-
     - name: Move a simple config to the server
       copy:
         src: simple-config.json
@@ -32,3 +20,34 @@
         dest: /home/workshops/simple-config-from-template.json
       vars:
         config_name: "Test name"
+
+- name: Install packages on ec2 servers
+  hosts: aws-instances
+  become: true
+
+  tasks:
+    - name: Install the latest version of Apache
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Install the nmap
+      package:
+        name: nmap
+        state: latest
+
+- name: Install packages on cloudsigma servers
+  hosts: cloudsigma-instances
+  become: true
+
+  tasks:
+    - name: Install the latest version of Apache
+      apt:
+        name: apache2
+        state: latest
+        update_cache: yes
+
+    - name: Install the nmap
+      package:
+        name: nmap
+        state: latest

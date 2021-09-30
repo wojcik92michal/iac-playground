@@ -1,0 +1,34 @@
+---
+- name: Setup servers
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create /home/workshops repo
+      file:
+        path: "/home/workshops"
+        state: directory
+
+    - name: Install the nmap
+      package:
+        name:
+          - nmap
+        state: latest
+
+    - name: Install the latest version of Apache
+      yum:
+        name:
+          - httpd
+        state: latest
+
+    - name: Move a simple config to the server
+      copy:
+        src: simple-config.json
+        dest: /home/workshops/simple-config.json
+
+    - name: Move a template to the server
+      template:
+        src: simple-config-from-template.j2
+        dest: /home/workshops/simple-config-from-template.json
+      vars:
+        config_name: "Test name"
