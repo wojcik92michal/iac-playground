@@ -8,3 +8,15 @@
       file:
         path: "/home/workshops"
         state: directory
+
+    - name: Install the latest version of Apache
+      package:
+        name:
+          - httpd
+        state: latest
+
+    - name: Install the nmap
+      package:
+        name:
+          - nmap
+        state: latest
